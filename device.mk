@@ -151,14 +151,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
+    libc2dcolorconvert \
     libdashplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxVdecHevc \
     libOmxVdec \
     libOmxVenc \
+    libOmxVidcCommon \
+    libextmedia_jni \
     libstagefrighthw \
     qcmediaplayer
 
