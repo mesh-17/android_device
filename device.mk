@@ -51,7 +51,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1280
+TARGET_SCREEN_WIDTH := 1080
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
@@ -60,10 +60,10 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
-    audio.primary.msm8916 \
+    audio.primary.msm8952 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_amplifier.msm8916 \
+    audio_amplifier.msm8952 \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -83,14 +83,9 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
-
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8916 \
-    libmm-qcamera
+    libcamera_shim
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -109,21 +104,17 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8916 \
-    gralloc.msm8916 \
-    hwcomposer.msm8916 \
+    copybit.msm8952 \
+    gralloc.msm8952 \
+    hwcomposer.msm8952 \
     libtinyxml \
-    memtrack.msm8916
+    memtrack.msm8952
 
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck \
+    setup_fs \
     make_ext4fs
-
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -142,13 +133,14 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/cyttsp5_mt.kl:system/usr/keylayout/cyttsp5_mt.kl \
-    $(LOCAL_PATH)/keylayout/goodix.kl:system/usr/keylayout/goodix.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    $(LOCAL_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl 
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8916
+    lights.msm8952
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -175,7 +167,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-    power.msm8916
+    power.msm8952
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -208,7 +200,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.msm8916
+    sensors.msm8952
 
 # Thermal
 PRODUCT_COPY_FILES += \
