@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/huawei/kiwi
+DEVICE_PATH := device/xiaomi/kenzo
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -174,4 +174,4 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 
 # inherit from the proprietary version
--include vendor/huawei/kiwi/BoardConfigVendor.mk
+-include vendor/xiaomi/kenzo/BoardConfigVendor.mk
