@@ -117,7 +117,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),tomato)
+ifeq (\$(TARGET_DEVICE),kenzo)
 ifeq (\$(QCPATH),)
 
 include \$(CLEAR_VARS)
