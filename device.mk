@@ -83,10 +83,6 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library \
     libantradio
 
-# BoringSSL-compat
-PRODUCT_PACKAGES += \
-    libboringssl-compat
-
 # Camera
 PRODUCT_PACKAGES += \
     libcamera_shim
@@ -97,13 +93,14 @@ PRODUCT_PACKAGES += \
 
 # Compatibility
 PRODUCT_PACKAGES += \
+    libboringssl-compat \
+    libstlport \
     libshim_camera_post_mediaserver \
     libshim_cutils \
     libshim_gps \
     libshim_ril \
     libshim_sensormanager \
     libshim_sound_trigger \
-    libstlport
 
 # Display
 PRODUCT_PACKAGES += \
