@@ -201,6 +201,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli \
     libxml2
 
 # Thermal
