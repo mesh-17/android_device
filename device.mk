@@ -151,19 +151,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 PRODUCT_PACKAGES += \
-    libdivxdrmdecrypt \
     libc2dcolorconvert \
+    libdivxdrmdecrypt \
     libdashplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
-    libOmxVdecHevc \
     libOmxVdec \
+    libOmxVdecHevc \
     libOmxVenc \
-    libOmxVidcCommon \
-    libextmedia_jni \
     libstagefrighthw \
     qcmediaplayer
 
@@ -191,10 +189,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     ueventd.rc
 
-# RIL
-PRODUCT_PACKAGES += \
-    libxml2
-
+# QC data 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dsi_config.xml:system/etc/data/dsi_config.xml \
     $(LOCAL_PATH)/configs/netmgr_config.xml:system/etc/data/netmgr_config.xml \
@@ -203,6 +198,10 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8952
+
+# RIL
+PRODUCT_PACKAGES += \
+    libxml2
 
 # Thermal
 PRODUCT_COPY_FILES += \
